@@ -12,3 +12,7 @@ span.inlinecode {
     letter-spacing: -0.1em;
     padding-right: 5px;
 }
+
+blockquote.darker {
+	background: rgba(0, 0, 0, 0.50) !important;
+}
