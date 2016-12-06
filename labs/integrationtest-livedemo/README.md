@@ -1,16 +1,8 @@
-# Enterprise Mobile Examples
-In this repository you'll find example code I use for teaching the course `Enterprise Mobile` at the [PXL](http://www.pxl.be).
-
-## Different branches for different examples
-See the different branches to check out the different approaches to some problems
+# Unit, Integration, Scenario Test Examples
+In this repository you'll find examples of regular Unit Tests, Integration Tests (against a database) and Scenario Tests (starting from a REST endpoint all the way to the database).
 
 ## How to run in your IDE
 In `build.gradle` I included the `idea` and `eclipse` plugins, so all there is to it is `./gradlew eclipse` or `./gradlew idea` or `./gradlew.bat ...` if you're on windows.
-
-## More examples of SpringBoot
-[https://spring.io/guides/gs/spring-boot/](https://spring.io/guides/gs/spring-boot/)
-
-[https://spring.io/guides/tutorials/bookmarks/](https://spring.io/guides/tutorials/bookmarks/)
 
 ## Docker stuff
 If you're not on Linux [install Docker-Toolbox](https://www.docker.com/docker-toolbox).
@@ -43,11 +35,6 @@ docker-machine restart default                          # Restart the environmen
 `$(docker-machine env default)`                         # Refresh your environment settings
 eval "$(/c/DockerTools/docker-machine env default)"     # Or this is if you're on windows
 ```
-
-## ActiveMQ
-To monitor the queues that were started by the ActiveMQ broker, you can navigate to `http://<your vm's ip>:8161/admin`.
-
-You can log in with the default credentials: `admin/admin`.
 
 ## FlyWay
 [FlyWay](http://flywaydb.org/) makes sure your database tables are up to date and uses simple convention over configuration to manage your versioned SQL scripts.
