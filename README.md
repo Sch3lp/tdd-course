@@ -1,4 +1,4 @@
-# Test Driven Design for Teachers: the course
+# [Test Driven Design for Teachers: the course](http://wgroeneveld.github.io/tdd-course)
 
 Based on our own experience and books we've read. 
 
@@ -6,4 +6,4 @@ These files will be used to teach and educate others on how to write clean code,
 
 Using tests as a solid base!
 
-[Slides](http://wgroeneveld.github.io/tdd-course).
+[Slides](http://wgroeneveld.github.io/tdd-course)
