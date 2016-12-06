@@ -1,4 +1,8 @@
 *.dll
 *.pdb
+*.suo
+*.vs
 labs/bugfix-livedemo/packages
-*/obj/Debug
+bin
+obj
+packages

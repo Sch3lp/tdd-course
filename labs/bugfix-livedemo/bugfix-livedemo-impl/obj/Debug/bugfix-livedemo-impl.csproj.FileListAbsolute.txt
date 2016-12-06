@@ -1,5 +1,0 @@
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo-impl\bin\Debug\bugfix-livedemo-impl.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo-impl\bin\Debug\bugfix-livedemo-impl.pdb
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo-impl\obj\Debug\bugfix-livedemo-impl.csprojResolveAssemblyReference.cache
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo-impl\obj\Debug\bugfix-livedemo-impl.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo-impl\obj\Debug\bugfix-livedemo-impl.pdb
