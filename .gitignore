@@ -1,0 +1,4 @@
+*.dll
+*.pdb
+labs/bugfix-livedemo/packages
+*/obj/Debug
