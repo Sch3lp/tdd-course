@@ -1,0 +1,14 @@
+
+.reveal pre {
+	width: 100% !important;
+}
+
+.reveal pre code {
+	max-height: 550px !important;
+}
+
+span.inlinecode {
+	font-family: courier;
+    letter-spacing: -0.1em;
+    padding-right: 5px;
+}
