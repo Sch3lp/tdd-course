@@ -4,7 +4,7 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>Clean Code - Prato NV</title>
+		<title>TDD</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
 		<link rel="stylesheet" href="css/theme/black.css">
@@ -114,25 +114,21 @@
 				<section>
 					<section>
 						<h4>Soorten testen</h4>
+						<img src="img/testniveaus.png"/>
 						<p>&nbsp;</p>
-						<div style="padding-left: 300px;">
-							<div style="width: 100px; background-color: red; margin-left: 125px;">E2E</div>
-							<div style="width: 250px; background-color: orange; margin-left: 50px;">Integration</div>
-							<div style="width: 350px; background-color: green">Unit</div>
-						</div>
 					</section>
 					<section>
-						<h4 style="background-color: green">unit testing</h4>
+						<h4 style="background-color: green">Unit Testing</h4>
 						<ul>
 						<li>Onafhankelijk van externen (db, webservice, ...)</li>
 						<li>Snel!</li>
 						<li>Véél testen</li>
-						<li>Test normaal pad &amp; limieten</li>
-						<li>"actieve vijand van de code"</li>
+						<li>Test Happy Path &amp; Edge Cases</li>
+						<li>"Actieve vijand van de code"</li>
 						</ul>
 					</section>
 					<section>
-						<h4 style="background-color: orange">integration testing</h4>
+						<h4 style="background-color: orange">Integration Testing</h4>
 						<ul>
 						<li>Test geïntegreerd met externen (db, webservice, ...)</li>
 						<li>Test integratie <strong>twee verschillende lagen</strong></li>
@@ -141,7 +137,7 @@
 						</ul>
 					</section>
 					<section>
-						<h4 style="background-color: red">end to end testing</h4>
+						<h4 style="background-color: red">End to End Testing</h4>
 						<ul>
 						<li>Test hele applicatie!</li>
 						<li>niet alle limieten</li>
@@ -151,8 +147,6 @@
 					</section>
 
 				</section>
-
-
 
 			</div>
 		</div>
