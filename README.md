@@ -6,4 +6,4 @@ These files will be used to teach and educate others on how to write clean code,
 
 Using tests as a solid base!
 
-[http://wgroeneveld.github.io/tdd-course](Slides).
+[Slides](http://wgroeneveld.github.io/tdd-course).
