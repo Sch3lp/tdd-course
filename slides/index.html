@@ -56,28 +56,100 @@
 					</section>
 				</section>
 
+
 				<section>
-					TDD deel 1: unit testen
+					<h2>TDD Deel 1: <br/>Unit testing</h2>
+					<img src="img/nunit.png"/>
 				</section>
 
 				<section>
-					Wat unit testen?
+
+					<section>
+						<h4>Waarom unit testen?</h4>
+                        <img src="img/waaromunittesten.jpg" />
+					</section>
+
+					<section>
+						<h4>Waarom unit testen?</h4>
+						<ul>
+						<li><strong>feedback!</strong></li>
+						<li>Denk in code vanuit API standpunt</li>
+						<li>Makkelijk voor pair om te volgen</li>
+						<li>Alle mogelijke paden gedekt</li>
+						</ul>
+					</section>
 				</section>
 
 				<section>
-					waarom?(laten voelen)
+					<h4>Eigenschappen van een goede test</h4>
+					<ul>
+					<li>Ontdek sneller bugs</li>
+					<li>Leesbaar</li>
+					<li>Geautomatiseerd</li>
+					<li>Snel &amp; gefocuset (test 1 ding)</li>
+					<li>Herhaalbaar</li>
+					<li>Volgorde onafhankelijk</li>
+					<li>Losgekoppeld van de implementatie</li>
+					<li>Productie code makkelijker wijzigbaar</li>
+					</ul>
+				</section>
+
+				<section><h4>Eigenschappen van een goede test<br/>
+				Geautomatiseerd</h4>
+				<img src="img/teamcity.png"/>
+				</section>
+				<section><h4>Eigenschappen van een goede test<br/>
+				"living documentation"</h4>
+				<img src="img/livingdocumentation.png"/>
+				</section>
+				<section>
+					<h4>Test Driven Development (TDD)</h4>
+					<img src="img/tdd.png"/>
+				</section>
+				<section data-background="img/abugslife.jpg">
+					<h4>TDD: "bugfix" edge case</h4>
+					live demo
 				</section>
 
 				<section>
-				eigenschappen van een goede test
-				</section>
+					<section>
+						<h4>Soorten testen</h4>
+						<p>&nbsp;</p>
+						<div style="padding-left: 300px;">
+							<div style="width: 100px; background-color: red; margin-left: 125px;">E2E</div>
+							<div style="width: 250px; background-color: orange; margin-left: 50px;">Integration</div>
+							<div style="width: 350px; background-color: green">Unit</div>
+						</div>
+					</section>
+					<section>
+						<h4 style="background-color: green">unit testing</h4>
+						<ul>
+						<li>Onafhankelijk van externen (db, webservice, ...)</li>
+						<li>Snel!</li>
+						<li>Véél testen</li>
+						<li>Test normaal pad &amp; limieten</li>
+						<li>"actieve vijand van de code"</li>
+						</ul>
+					</section>
+					<section>
+						<h4 style="background-color: orange">integration testing</h4>
+						<ul>
+						<li>Test geïntegreerd met externen (db, webservice, ...)</li>
+						<li>Test integratie <strong>twee verschillende lagen</strong></li>
+						<li>Trager dan unit tests</li>
+						<li>Minder test cases</li>
+						</ul>
+					</section>
+					<section>
+						<h4 style="background-color: red">end to end testing</h4>
+						<ul>
+						<li>Test hele applicatie!</li>
+						<li>niet alle limieten</li>
+						<li>traag, moelijker onderhoudbaar</li>
+						<li>Test integratie <strong>alle</strong> lagen</li>
+						</ul>
+					</section>
 
-				<section>
-					Red-green-refactor
-				</section>
-
-				<section>
-					Niveau's van testen: unit tests, integration tests, end-to-end tests
 				</section>
 
 
