@@ -62,13 +62,13 @@
 						<tbody>
 							<tr><td>9:10</td><td>Laptop setup double check</td></tr>
 							<tr><td>9:20</td><td>Unit Testing</td></tr>
-							<tr><td>10:00</td><td>Oefening: Basic Unit testing (JS)</td></tr>
+							<tr><td>10:00</td><td>Oefening: Basic Unit testing (<strong>JS</strong>)</td></tr>
 							<tr><td>11:00</td><td>Unit Testing en TDD</td></tr>
-							<tr><td>11:30</td><td>Oefening: Legacy Code 1 (PHP)</td></tr>
+							<tr><td>11:30</td><td>Oefening: Legacy Code 1 (<strong>PHP</strong>)</td></tr>
 							<tr><td>12:00</td><td>Lunch</td></tr>
-							<tr><td>13:00</td><td>Oefening: Legacy Code 2 (PHP)</td></tr>
+							<tr><td>13:00</td><td>Oefening: Legacy Code 2 (<strong>PHP</strong>)</td></tr>
 							<tr><td>13:30</td><td>Soorten testen</td></tr>
-							<tr><td>14:00</td><td>Oefening: TDD</td></tr>
+							<tr><td>14:00</td><td>Oefening: Integrated TDD (<strong>Java</strong>)</td></tr>
 							<tr><td>16:50</td><td>Wat hebben we geleerd?</td></tr>
 						</tbody>
 					</table>
@@ -110,11 +110,28 @@
 
 					<section data-background="img/speculaas.jpg">
 						<blockquote class="darker">
-						<h2>Oefening</h2>
+						<h2>Oefening: basic testing in <strong>Javascript</strong></h2>
 						<h4>makkelijk genoeg voor alle niveau's</h4>
 						<a href="https://classroom.github.com/assignment-invitations/18edaf0f50a1fafb25c9bbb5fdd8f7eb">Oefening 1: speculaas</a>
 						</blockquote>
 					</section>
+					<section>
+						<h4>Unit testing in JS</h4>
+						<p>
+							<a href="http://jasmine.github.io/2.5/introduction.html" target="_blank"><img src="img/jasmine-horizontal.png" alt="jasmine logo" /></a>
+						</p>
+
+						<pre><code>
+		describe("A suite", function() {
+		  it("contains spec with an expectation", function() {
+		    expect(true).toBe(true);
+		  });
+		});
+						</code></pre>
+
+						Beschrijft <strong>gedrag</strong>
+					</section>
+
 				</section>
 
 				<section>
@@ -155,13 +172,30 @@
 
 				<section data-background="img/abugslife.jpg">
 					<h4>TDD: "bugfix" edge case</h4>
-					Live Demo
+					Live Demo in <strong>C#</strong>
 				</section>
 				
 				<section>
-					<h4>Legacy Code: Oefeningen</h4>
-					<a href="https://classroom.github.com/assignment-invitations/cb292bbd37bf63d28ef5525262986f74">Legacy Code oefening</a>
+					<section>
+						<h4>Oefening: Legacy code in <strong>PHP</strong></h4>
+						<a href="https://classroom.github.com/assignment-invitations/cb292bbd37bf63d28ef5525262986f74">Legacy Code oefening</a>
+					</section>
+					<section>
+						<h4>Unit Testing met PHPUnit</h4>
+						<p><a href="https://phpunit.de/manual/" target="_blank">https://phpunit.de/manual/</a></p>
+
+						<pre><code>
+    public function testStub()
+    {
+        $mock = $this->createMock(SomeClass::class);
+        $mock->method('doSomething')->willReturn('foo');
+
+        $this->assertEquals('foo', $mock->doSomething());
+    }
+						</code></pre>
+					</section>
 				</section>
+
 
 				<section>
 					<section>
@@ -224,11 +258,33 @@
 					</section>
 				</section>
 				<section>
-					<h4>En nu is het aan jullie!</h4>
-					<a href="https://classroom.github.com/assignment-invitations/dee34e87efca3b3aa1fa5e518c4d6759">TDD Oefening</a>
-					<br/>
-					Om jullie te helpen om sneller te ontwikkelen:<br/>
-					<a href="https://github.com/Sch3lp/ProductivityWithShortcuts">Shortcuts cursus met IntelliJ</a><br/>
+					<section>
+						<h4>Oefening: Integrated TDD met <strong>Java</strong></h4>
+						<a href="https://classroom.github.com/assignment-invitations/dee34e87efca3b3aa1fa5e518c4d6759">En nu is het aan jullie!</a>
+						<p>
+							Om jullie te helpen om sneller te ontwikkelen:<br/>
+							<a href="https://github.com/Sch3lp/ProductivityWithShortcuts">Shortcuts cursus met IntelliJ</a><br/>
+						</p>
+					</section>
+					<section>
+						<h4>Unit Testing met Java</h4>
+						<p>
+							<a href="http://junit.org/junit4/javadoc/latest/" target="_blank">http://junit.org/junit4/javadoc/latest/</a><br/>
+							<a href="http://joel-costigliola.github.io/assertj/" target="_blank">http://joel-costigliola.github.io/assertj/</a>
+						</p>
+
+						<pre><code>
+    import static org.assertj.core.api.Assertions.assertThat;
+
+    @Test
+    public void methodShouldReturnTrueIfBehaviourCorrect()
+    {
+    	bool result = method();
+        assertThat(result).isTrue();
+    }
+						</code></pre>
+					</section>
+
 				</section>
 
 				<section>	
