@@ -177,9 +177,42 @@
 					<img src="img/tdd.png" width="60%"/>
 				</section>
 
-				<section data-background="img/abugslife.jpg">
-					<h4>TDD: "bugfix" edge case</h4>
-					Live Demo in <strong>C#</strong>
+				<section>
+					<section  data-background="img/abugslife.jpg">
+						<h4>TDD: "bugfix" edge case</h4>
+						Live Demo in <strong>C#</strong>
+					</section>
+					<section>
+						<h4>Unit testing in C#</h4>
+						<p>
+							<a href="https://github.com/nunit/docs/wiki" target="_blank"><img src="img/nunit-logo.png" alt="nunit logo" /></a>
+						</p>
+
+						<pre><code>
+	[TestFixture]
+	public class MyTestClass {
+
+		[Test]
+		public void SomeMethodShouldReturnTrueIfSomeCondition() {
+			var result = SomeMethod();
+			Assert.That(result, Is.EqualTo(expected));
+		}
+
+	}
+						</code></pre>
+
+					</section>
+					<section>
+						<h4>Unit testing in C#</h4>
+						
+						<p>
+							Gebruik tools van IDE:<br/>
+							<img src="img/howtorun_csharp.png" alt="how to run CSharp tests" width="70%"/>
+						</p>
+						<p>
+							<a href="https://www.jetbrains.com/resharper/documentation/documentation.html" target="_blank">Resharper Documentation</a>
+						</p>
+					</section>					
 				</section>
 				
 				<section>
