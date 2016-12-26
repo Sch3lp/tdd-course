@@ -1,3 +1,5 @@
+[![Build status](https://travis-ci.org/wgroeneveld/tdd-course.svg?branch=gh-pages)](https://travis-ci.org/wgroeneveld/tdd-course)
+
 # [Test Driven Design for Teachers: the course](http://wgroeneveld.github.io/tdd-course)
 
 Based on our own experience and books we've read. 

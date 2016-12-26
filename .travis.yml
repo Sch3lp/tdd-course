@@ -1,0 +1,8 @@
+language: php
+php:
+- 5.5
+install:
+- composer self-update
+- composer update
+script:
+- phpunit labs/travisci-livedemo/
