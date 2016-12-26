@@ -10,6 +10,7 @@ class SomeTests extends PHPUnit_Framework_TestCase {
 		$this->assertEquals(true, false);
 	}
 
+
 }
 
 ?>
