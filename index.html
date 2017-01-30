@@ -279,24 +279,31 @@ OK (23 tests, 25 assertions)
 				</section>
 
 				<section>
+					<section data-background="img/mob_programming.jpg">
+						&nbsp;
+					</section>
 					<section>
 						<h4>Code Retreat oefening</h4>
 						<a href="http://github.com/SoftwareSandbox/gdcr16-java">Java</a><br/>
 						<a href="http://github.com/SoftwareSandbox/gdcr16-js">JavaScript</a><br/>
 						<a href="http://github.com/SoftwareSandbox/gdcr16-csharp">C# .NET</a><br/>
 						<a href="http://github.com/SoftwareSandbox/gdcr16-php">PHP</a><br/>
+
+						<p>
+							&raquo;&nbsp;&nbsp;<strong><a href="http://oss.jahed.io/agility/timer.html" target="_blank">Mob Timer</a></strong>
+						</p>
 					</section>
 					<section style="font-size: 20pt;">
 					<ul>
 						<li>Write exactly one new test. It should be the smallest test which seems to point in the direction of a solution</li>
 						<li>Run the test to make sure it fails</li>
-						<li>Make the test from (1) pass by writing the least amount of implementation code you can IN THE TEST METHOD.</li>
+						<li>Make the test from (1) pass by writing the least amount of implementation code you can <strong>IN THE TEST METHOD</strong>.</li>
 						<li>Refactor to remove duplication or otherwise as required to improve the design. Be strict about the refactorings. Only introduce new abstractions (methods, classes, etc) when they will help to improve the design of the code.</li>
 					</ul>
-						Specifically:
+						<em>Specifically</em>:
 					<ul>
-						<li>ONLY Extract a new method if there is sufficient code duplication in the test methods. When extracting a method, initially extract it to the test class (don't create a new class yet).</li>
-						<li>ONLY create a new class when a clear grouping of methods emerges and when the test class starts to feel crowded or too large.</li>
+						<li><strong>ONLY</strong> Extract a new method if there is sufficient code duplication in the test methods. When extracting a method, initially extract it to the test class (don't create a new class yet).</li>
+						<li><strong>ONLY</strong> create a new class when a clear grouping of methods emerges and when the test class starts to feel crowded or too large.</li>
 					</ul>
 					Repeat the process by writing another test (go back to step #1).
 					</section>
