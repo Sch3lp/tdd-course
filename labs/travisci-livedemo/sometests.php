@@ -7,7 +7,8 @@ class SomeTests extends PHPUnit_Framework_TestCase {
 	}
 
 	public function testSomeEvenMoreImportantThings_ShouldBeFalse() {
-		$this->assertEquals(true, false);
+		$importantThingOne = "one";
+		$this->assertEquals($importantThingOne, "two");
 	}
 
 
