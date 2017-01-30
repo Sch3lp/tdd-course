@@ -25,7 +25,7 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Test-Driven Design</h1>
+					<h1>Test-Driven Development</h1>
 					<h3></h3>
 						<img src="img/tim.jpeg" width="20%"/>
 						<img src="img/wouter.jpeg" width="20%"/>
@@ -33,10 +33,36 @@
 						<small>
 							<span style="font-size: 11pt;">
 								Tim Schraepen &amp; Wouter Groeneveld<br/>
-								30/01/2017
+								30/01/2017<br/>
+								<a href="https://wgroeneveld.github.io/tdd-course/">https://wgroeneveld.github.io/tdd-course/</a>
 							</span>
 						</small>
 					</p>
+				</section>
+
+				<section>
+					<h4>Pre-requirements: installaties</h4>
+					<h5>PHP</h5>
+					<ul>
+						<li><a href="http://php.net/" target="_blank">http://php.net/</a></li>
+						<li><a href="https://phpunit.de/manual/current/en/installation.html" target="_blank">https://phpunit.de/manual/current/en/installation.html</a></li>
+					</ul>
+					<pre><code>
+	echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
+					</code></pre>
+
+					<h5>Java</h5>
+
+					<ul>
+						<li><a href="https://www.jetbrains.com/idea/download/download-thanks.html?code=IIC" target="_blank">https://www.jetbrains.com/idea/#chooseYourEdition</a></li>
+						<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/</a></li>
+					</ul>
+
+					<h5>Een editor</h5>
+					
+					<a href="https://code.visualstudio.com/" target="_blank">VSCode</a> of 
+					<a href="https://www.sublimetext.com/" target="_blank">Sublime</a> of 
+					<a href="https://atom.io/" target="_blank">Atom</a>
 				</section>
 
 				<section>
@@ -64,7 +90,8 @@
 							<tr><td>9:20</td><td>Unit Testing</td></tr>
 							<tr><td>10:00</td><td>Oefening: Basic Unit testing (<strong>JS</strong>)</td></tr>
 							<tr><td>11:00</td><td>Unit Testing en TDD</td></tr>
-							<tr><td>11:30</td><td>Oefening: Legacy Code 1 (<strong>PHP</strong>)</td></tr>
+							<tr><td>11:10</td><td>Oefening: Legacy Code 1 (<strong>PHP</strong>)</td></tr>
+							<tr><td>11:30</td><td>Code Retreat!</td></tr>
 							<tr><td>12:00</td><td>Lunch</td></tr>
 							<tr><td>13:00</td><td>Oefening: Legacy Code 2 (<strong>PHP</strong>)</td></tr>
 							<tr><td>13:30</td><td>Soorten testen</td></tr>
@@ -84,7 +111,7 @@
 						<h2>Wat is Unit Testing</h2>
 						<ul>
 						<li>Test Harnas<br/>&nbsp;&nbsp;&nbsp;&nbsp;bvb. JUnit, MSTest</li>
-						<li>Assertion Framework <br/>&nbsp;&nbsp;&nbsp;bvb. <span class="inlinecode">Assert.AreEquals(expected, actual);</span></li>
+						<li>Assertion Framework <br/>&nbsp;&nbsp;&nbsp;bvb. <span class="inlinecode">Assert.That(expected).IsEqualTo(actual);</span></li>
 						<li>TDD</li>
 						</ul>
 					</section>
@@ -130,6 +157,7 @@
 						</code></pre>
 
 						Beschrijft <strong>gedrag</strong><br/>
+						C# equiv.: <span class="inlinecode">Assert.That(true).IsEqualTo(true);</span>
 					</section>
 					<section>
 						<h4>Unit testing in JS</h4>
