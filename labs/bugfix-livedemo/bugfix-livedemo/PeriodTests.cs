@@ -8,6 +8,16 @@ namespace bugfix_livedemo
     public class PeriodTests
     {
         [Test]
+        // GIVEN WHEN THEN
+        public void IsInPeriod_ExactlyOnPeriod_True()
+        {
+            var period = new Period(TenthOctober(), new DateTime(2016, 10, 20));
+            var date = TenthOctober();
+
+            Assert.That(period.IsInPeriod(date), Is.True);
+        }
+
+        [Test]
         public void IsInPeriod_InPeriode_True()
         {
             var period = new Period(new DateTime(2016, 10, 10), new DateTime(2016, 10, 20));
@@ -26,6 +36,11 @@ namespace bugfix_livedemo
         {
             var period = new Period(new DateTime(2016, 10, 10), new DateTime(2016, 10, 20));
             Assert.That(period.IsInPeriod(new DateTime(2016, 10, 1)), Is.False);
+        }
+
+        private static DateTime TenthOctober()
+        {
+            return new DateTime(2016, 10, 10);
         }
     }
 }
