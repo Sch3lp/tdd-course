@@ -6,3 +6,12 @@ labs/bugfix-livedemo/packages
 bin
 obj
 packages
+.DS_Store
+*.class
+.gradle/
+out/
+build/
+*.war
+*.jar
+*.ear
+*.rar

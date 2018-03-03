@@ -25,77 +25,20 @@
 		<div class="reveal">
 			<div class="slides">
 				<section>
-					<h1>Test-Driven Development</h1>
-					<h3></h3>
-						<img src="img/tim.jpeg" width="20%"/>
-						<img src="img/wouter.jpeg" width="20%"/>
-					<p>
-						<small>
-							<span style="font-size: 11pt;">
-								Tim Schraepen &amp; Wouter Groeneveld<br/>
-								30/01/2017<br/>
-								<a href="https://wgroeneveld.github.io/tdd-course/">https://wgroeneveld.github.io/tdd-course/</a>
-							</span>
-						</small>
-					</p>
-				</section>
-
-				<section>
-					<h4>Pre-requirements: installaties</h4>
-					<h5>PHP</h5>
-					<ul>
-						<li><a href="http://php.net/" target="_blank">http://php.net/</a></li>
-						<li><a href="https://phpunit.de/manual/current/en/installation.html" target="_blank">https://phpunit.de/manual/current/en/installation.html</a></li>
-					</ul>
-					<pre><code>
-	echo @php "%~dp0phpunit.phar" %* > phpunit.cmd
-					</code></pre>
-
-					<h5>Java</h5>
-
-					<ul>
-						<li><a href="https://www.jetbrains.com/idea/download/download-thanks.html?code=IIC" target="_blank">https://www.jetbrains.com/idea/#chooseYourEdition</a></li>
-						<li><a href="http://www.oracle.com/technetwork/java/javase/downloads/index-jsp-138363.html" target="_blank">http://www.oracle.com/technetwork/java/javase/downloads/</a></li>
-					</ul>
-
-					<h5>Een editor</h5>
-					
-					<a href="https://code.visualstudio.com/" target="_blank">VSCode</a> of 
-					<a href="https://www.sublimetext.com/" target="_blank">Sublime</a> of 
-					<a href="https://atom.io/" target="_blank">Atom</a>
-				</section>
-
-				<section>
-					<h4>Introductie</h4>
-					<section>
-						<h4>Wouter</h4>
-						Prato, brood bakken, PXL, ...
-					</section>
-					<section>
-						<h4>Tim</h4>
-						Cegeka, LeanCoffee Leuven, PXL, ...
-					</section>
-					<section>
-						<h4>Doel</h4>
-						<ul>
-						<li>Jullie zelfzeker maken in TDD</li>
-						<li>Zodat jullie dit kunnen overbrengen aan jullie leerlingen</li>
-						<li>Door middel van TDD in jullie lessen te verwikkelen</li>
-						</ul>
-					</section>
+					<h4>Introduction</h4>
 					<section style="font-size: 20pt;">
 					<table>
 						<tbody>
 							<tr><td>9:10</td><td>Laptop setup double check</td></tr>
 							<tr><td>9:20</td><td>Unit Testing</td></tr>
-							<tr><td>10:00</td><td>Oefening: Basic Unit testing (<strong>JS</strong>)</td></tr>
-							<tr><td>11:00</td><td>Unit Testing en TDD</td></tr>
-							<tr><td>11:10</td><td>Oefening: Legacy Code 1 (<strong>PHP</strong>)</td></tr>
+							<tr><td>10:00</td><td>Exercise: Basic Unit testing</td></tr>
+							<tr><td>11:00</td><td>Unit Testing & TDD</td></tr>
+							<tr><td>11:10</td><td>Exercise: Legacy Code 1</td></tr>
 							<tr><td>11:30</td><td>Code Retreat!</td></tr>
 							<tr><td>12:00</td><td>Lunch</td></tr>
-							<tr><td>13:30</td><td>Soorten testen</td></tr>
-							<tr><td>14:00</td><td>Oefening: Integrated TDD (<strong>Java</strong>)</td></tr>
-							<tr><td>16:50</td><td>Wat hebben we geleerd?</td></tr>
+							<tr><td>13:30</td><td>Kinds of tests</td></tr>
+							<tr><td>14:00</td><td>Exercise: Integrated TDD</td></tr>
+							<tr><td>16:50</td><td>What did we learn?</td></tr>
 						</tbody>
 					</table>
 					</section>
@@ -103,14 +46,14 @@
 
 				<section>
 					<section>
-						<h2>TDD Deel 1: <br/>Unit testing</h2>
+						<h2>TDD vs.<br/>Unit testing</h2>
 						<img src="img/nunit.png"/>
 					</section>
 					<section>
-						<h2>Wat is Unit Testing</h2>
+						<h2>What is Unit Testing</h2>
 						<ul>
-						<li>Test Harnas<br/>&nbsp;&nbsp;&nbsp;&nbsp;bvb. JUnit, MSTest</li>
-						<li>Assertion Framework <br/>&nbsp;&nbsp;&nbsp;bvb. <span class="inlinecode">Assert.That(expected).IsEqualTo(actual);</span></li>
+						<li>Test Harnass<br/>&nbsp;&nbsp;&nbsp;&nbsp;eg. JUnit, MSTest</li>
+						<li>Assertion Framework <br/>&nbsp;&nbsp;&nbsp;eg. <span class="inlinecode">assertThat(actual).IsEqualTo(expected);</span></li>
 						<li>TDD</li>
 						</ul>
 					</section>
@@ -119,26 +62,26 @@
 				<section>
 
 					<section>
-						<h4>Waarom unit testen?</h4>
+						<h4>Why Unit Test?</h4>
                         <img src="img/waaromunittesten.jpg" />
 					</section>
 
 					<section>
-						<h4>Waarom unit testen?</h4>
+						<h4>Why Unit Test?</h4>
 						<ul>
 						<li><strong>Early Feedback!</strong></li>
-						<li>Denk in code vanuit API standpunt</li>
-						<li>Makkelijk voor pair om te volgen</li>
-						<li>Alle mogelijke paden gedekt</li>
-						<li>Documentatie</li>
+						<li>Think from an API perspective</li>
+						<li>Easy for your pair to follow along with your thought process</li>
+						<li>Cover all possible paths</li>
+						<li>Documentation</li>
 						</ul>
 					</section>
 
 					<section data-background="img/speculaas.jpg">
 						<blockquote class="darker">
-						<h2>Oefening: basic testing in <strong>Javascript</strong></h2>
-						<h4>makkelijk genoeg voor alle niveau's</h4>
-						<a href="https://classroom.github.com/assignment-invitations/18edaf0f50a1fafb25c9bbb5fdd8f7eb">Oefening 1: speculaas</a>
+						<h2>Exercise: basic unit testing in <strong>Javascript</strong></h2>
+						<h4>Easy enough for all levels</h4>
+						<a href="https://github.com/Sch3lp/tdd-course-exercise-1">Exercise 1: speculaas</a>
 						</blockquote>
 					</section>
 					<section>
@@ -155,14 +98,14 @@
 		});
 						</code></pre>
 
-						Beschrijft <strong>gedrag</strong><br/>
-						C# equiv.: <span class="inlinecode">Assert.That(true).IsEqualTo(true);</span>
+						Describes <strong>behavior</strong><br/>
+						Java (AssertJ) equiv.: <span class="inlinecode">assertThat(true).IsEqualTo(true);</span>
 					</section>
 					<section>
 						<h4>Unit testing in JS</h4>
 						
 						<p>
-							Hoe runnen? <span class="inlinecode">runtests.html</span><br/>
+							How to run? <span class="inlinecode">runtests.html</span><br/>
 							<img src="img/howtorun_js.png" alt="how to run JS tests" width="70%"/>
 						</p>
 					</section>
@@ -170,28 +113,28 @@
 
 				<section>
 					<section>
-						<h4>Eigenschappen van een goede test</h4>
+						<h4>Properties of a good test</h4>
 						<ul>
-						<li>Ontdek sneller bugs</li>
-						<li>Leesbaar</li>
-						<li>Geautomatiseerd</li>
-						<li>Snel &amp; gefocuset (test 1 ding)</li>
-						<li>Herhaalbaar</li>
-						<li>Volgorde onafhankelijk</li>
-						<li>Losgekoppeld van de implementatie</li>
-						<li>Productie code makkelijker wijzigbaar (aanpasbaarheid en design)</li>
+							<li>Readable</li>
+							<li>Fast &amp; Focused (tests exactly one thing)</li>
+							<li>Repeatable</li>
+							<li>Automatable</li>
+							<li>Order independent</li>
+							<li>Decoupled from implementation</li>
+							<li>Facilitates changing production code (flexibility & design)</li>
+							<li>Identifies bugs faster</li>
 						</ul>
 					</section>
 
 					<section>
-						<h4>Geautomatiseerd</h4>
+						<h4>Automated</h4>
 						<img src="img/teamcity.png" style="width: 60%" /><br/>
 
 						<a href="https://travis-ci.org/" target="_blank">Travis CI org. + GitHub live demo</a>
 					</section>
 					
 					<section>
-						<h4>Geautomatiseerd: build lifecycle</h4>
+						<h4>Automated: build lifecycle</h4>
 						<img src="img/devopsProcess.png" style="width: 125%" /><br/>
 					</section>
 
@@ -201,7 +144,7 @@
 					</section>
 
 					<section>
-						<h4>NIET Losgekoppeld van implementatie!</h4>
+						<h4>Example of not coupled from implementation</h4>
 						<script src="https://gist.github.com/Sch3lp/a712cb3bc2098253a2187d3ad26da431.js"></script>
 					</section>
 				</section>
@@ -212,12 +155,12 @@
 						<img src="img/tdd.png" width="60%"/>
 					</section>
 				<section>
-					<h4>En wat is refactoring?</h4>
+					<h4>What is refactoring?</h4>
 
-					<blockquote>Structuur veranderen,<br/> zonder inhoud te wijzigen!</blockquote>
+					<blockquote>Changing the structure of code,<br/> without changing its behavior!</blockquote>
 
 					<p style="font-size: 20pt; margin-top: 40px;">
-					Voel jij je veilig genoeg zonder testen?
+					Would you feel safe enough without tests?
 					</p>
 				</section>
 				</section>
@@ -225,84 +168,38 @@
 				<section>
 					<section  data-background="img/abugslife.jpg">
 						<h4>TDD: "bugfix" edge case</h4>
-						Live Demo in <strong>C#</strong>
+						Live Demo in <strong>Java</strong>
 					</section>
 					<section>
-						<h4>Unit testing in C#</h4>
+						<h4>Unit testing in Java</h4>
 						<p>
-							<a href="https://github.com/nunit/docs/wiki" target="_blank"><img src="img/nunit-logo.png" alt="nunit logo" /></a>
+							<a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests" target="_blank"><img src="img/junit5-logo.png" alt="junit5 logo" /></a>
 						</p>
 
 						<pre><code>
-	[TestFixture]
-	public class MyTestClass {
+						class FirstJUnit5Tests {
 
-		[Test]
-		public void SomeMethodShouldReturnTrueIfSomeCondition() {
-			var result = SomeMethod();
-			Assert.That(result, Is.EqualTo(expected));
-		}
-
-	}
+							@Test
+							void myFirstTest() {
+								assertEquals(2, 1 + 1);
+							}
+						
+						}
 						</code></pre>
 
 					</section>
-					<section>
-						<h4>Unit testing in C#</h4>
-						
-						<p>
-							Gebruik tools van IDE:<br/>
-							<img src="img/howtorun_csharp.png" alt="how to run CSharp tests" width="70%"/>
-						</p>
-						<p>
-							<a href="https://www.jetbrains.com/resharper/documentation/documentation.html" target="_blank">Resharper Documentation</a>
-						</p>
-					</section>					
 				</section>
 				
 				<section>
 					<section>
-						<h4>Oefening: Legacy code in <strong>PHP</strong></h4>
-						<a href="https://classroom.github.com/assignment-invitations/cb292bbd37bf63d28ef5525262986f74">Legacy Code oefening</a>
+						<h4>Exercise: Legacy code in <strong>Java</strong></h4>
+						<a href="https://github.com/Sch3lp/tdd-course-exercise-2">Legacy Code exercise</a>
 					</section>
 					<section>
 						<img src="img/working.jpg"
 							width="45%" 
 							alt="my code is working, I don't know why?"/>
 					</section>
-					<section>
-						<h4>Unit Testing in PHPUnit</h4>
-						<p><a href="https://phpunit.de/manual/" target="_blank">https://phpunit.de/manual/</a></p>
-
-						<pre><code>
-    public function testStub()
-    {
-        $mock = $this->createMock(SomeClass::class);
-        $mock->method('doSomething')->willReturn('foo');
-
-        $this->assertEquals('foo', $mock->doSomething());
-    }
-						</code></pre>
-					</section>
-					<section>
-						<h4>Unit Testing in PHP</h4>
-						
-						<p>
-							Hoe runnen? <br/>
-							<span class="inlinecode">phpunit [dir]</span><br/>
-							<span class="inlinecode">phpunit dir/testfile.php</span><br/>
-							<pre style="background-color: #555555; padding: 20px; border: 1px solid #FFFFFF;">
-PHPUnit 4.3.5 by Sebastian Bergmann.
-
-.......................
-
-Time: 105 ms, Memory: 2.75Mb
-
-OK (23 tests, 25 assertions)
-							</pre>
-						</p>
-					</section>
-
 				</section>
 
 				<section>
@@ -310,11 +207,13 @@ OK (23 tests, 25 assertions)
 						&nbsp;
 					</section>
 					<section>
-						<h4>Code Retreat oefening</h4>
-						<a href="http://github.com/SoftwareSandbox/gdcr16-java">Java</a><br/>
-						<a href="http://github.com/SoftwareSandbox/gdcr16-js">JavaScript</a><br/>
-						<a href="http://github.com/SoftwareSandbox/gdcr16-csharp">C# .NET</a><br/>
-						<a href="http://github.com/SoftwareSandbox/gdcr16-php">PHP</a><br/>
+						<h4>Code Retreat exercise</h4>
+						<a href="https://github.com/SoftwareSandbox/coderetreat-java8">Java</a><br/>
+						<a href="https://github.com/SoftwareSandbox/coderetreat-js">JavaScript</a><br/>
+						<a href="https://github.com/SoftwareSandbox/coderetreat-elm">Elm</a><br/>
+						<a href="https://github.com/SoftwareSandbox/coderetreat-kotlin">Kotlin</a><br/>
+						<a href="https://github.com/SoftwareSandbox/gdcr16-csharp">C# .NET</a><br/>
+						<a href="https://github.com/SoftwareSandbox/gdcr16-php">PHP</a><br/>
 
 						<p>
 							&raquo;&nbsp;&nbsp;<strong><a href="http://oss.jahed.io/agility/timer.html" target="_blank">Mob Timer</a></strong>
@@ -338,27 +237,27 @@ OK (23 tests, 25 assertions)
 
 				<section>
 					<section>
-						<h4>Soorten testen</h4>
+						<h4>Kinds of tests</h4>
 						<img src="img/testniveaus.png"/>
 						<p>&nbsp;</p>
 					</section>
 					<section>
 						<h4 style="background-color: green">Unit Testing</h4>
 						<ul>
-						<li>Onafhankelijk van externen (db, webservice, ...)</li>
-						<li>Snel!</li>
-						<li>Véél testen</li>
-						<li>Test Happy Path &amp; Edge Cases</li>
-						<li>"Actieve vijand van de code"</li>
+						<li>Independent of external sources (db, webservice, ...)</li>
+						<li>Fast!</li>
+						<li>LOTS of tests</li>
+						<li>Tests both Edge Cases &amp; Happy Path</li>
+						<li><i>Active enemy of your production code</i></li>
 						</ul>
 					</section>
 					<section>
 						<h4 style="background-color: orange">Integration Testing</h4>
 						<ul>
-						<li>Test geïntegreerd met externen (db, webservice, ...)</li>
-						<li>Test integratie <strong>twee verschillende lagen</strong></li>
-						<li>Trager dan unit tests</li>
-						<li>Minder test cases</li>
+						<li>Tests are integrated with external sources (db, webservice, ...)</li>
+						<li>Tests integration between <strong>two different layers</strong></li>
+						<li>Generally slower than unit tests, but should still be fast</li>
+						<li>Usually less test cases than unit tests</li>
 						</ul>
 					</section>
 					<section>
@@ -378,38 +277,37 @@ OK (23 tests, 25 assertions)
 						</p>
 
 						<p>
-						Details: zie <a href="http://martinfowler.com/articles/mocksArentStubs.html" target="_blank">Mocks aren't stubs</a> by Martin Fowler.
+						Read <a href="http://martinfowler.com/articles/mocksArentStubs.html" target="_blank">Mocks aren't stubs</a> by Martin Fowler.
 						</p>
 					</section>
 					<section>
 						<h4 style="background-color: red">End to End Testing</h4>
 						<ul>
-						<li>Test hele applicatie!</li>
-						<li>niet alle limieten</li>
-						<li>traag, moeilijker onderhoudbaar</li>
-						<li>Test integratie <strong>alle</strong> lagen</li>
+						<li>Tests the entire application!</li>
+						<li>Usually slower</li>
+						<li>More difficult to maintain</li>
+						<li>Tests integration between <strong>all</strong> layers</li>
 						</ul>
 					</section>
 					<section>
-						<h4>Voorbeeldje/demo</h4>
-						Eventueel mee volgen in <br/>
-						<a href="https://github.com/wgroeneveld/tdd-course/tree/gh-pages/labs/integrationtest-livedemo" target="_blank">tdd-course/labs/integrationtest-livedemo</a>
+						<h4>Demo</h4>
+						You could follow along in<br/>
+						<a href="https://github.com/sch3lp/tdd-course/tree/gh-pages/labs/integrationtest-livedemo" target="_blank">tdd-course/labs/integrationtest-livedemo</a>
 					</section>
 				</section>
 				<section>
 					<section>
-						<h4>Oefening: Integrated TDD met <strong>Java</strong></h4>
-						<a href="https://classroom.github.com/assignment-invitations/dee34e87efca3b3aa1fa5e518c4d6759">En nu is het aan jullie!</a>
+						<h4>Exercise: Integrated TDD with <strong>Java</strong></h4>
+						<a href="https://github.com/sch3lp/tdd-course-exercise-3">And now it's your turn again!</a>
 						<p>
-							Om jullie te helpen om sneller te ontwikkelen:<br/>
+							To help you develop faster:<br/>
 							<a href="https://github.com/Sch3lp/ProductivityWithShortcuts">Shortcuts cursus met IntelliJ</a><br/>
-							<a href="https://www.jetbrains.com/resharper/docs/ReSharper_DefaultKeymap_VSscheme.pdf">ReSharper cheat sheet keymap</a>
 						</p>
 					</section>
 					<section>
 						<h4>Unit Testing in Java</h4>
 						<p>
-							<a href="http://junit.org/junit4/javadoc/latest/" target="_blank">http://junit.org/junit4/javadoc/latest/</a><br/>
+							<a href="https://junit.org/junit5/docs/current/user-guide/#writing-tests" target="_blank">Writing tests in JUnit 5</a><br/>
 							<a href="http://joel-costigliola.github.io/assertj/" target="_blank">http://joel-costigliola.github.io/assertj/</a>
 						</p>
 
@@ -417,8 +315,7 @@ OK (23 tests, 25 assertions)
     import static org.assertj.core.api.Assertions.assertThat;
 
     @Test
-    public void methodShouldReturnTrueIfBehaviourCorrect()
-    {
+    void methodShouldReturnTrueIfBehaviourCorrect() {
     	bool result = method();
         assertThat(result).isTrue();
     }
@@ -427,7 +324,7 @@ OK (23 tests, 25 assertions)
 					<section>
 						<h4>Unit Testing in Java</h4>
 						<p>
-							Hoe runnen? Gebruik tools van IDE:<br/>
+							How to run? Use your IDE:<br/>
 							<img src="img/howtorun_java.png" alt="How to run java tests"/>
 						</p>
 					</section>
@@ -441,27 +338,27 @@ OK (23 tests, 25 assertions)
 						<span style="font-size: 20pt;">
 						<ul>
 						<li><a href="http://butunclebob.com/files/downloads/Bowling%20Game%20Kata.ppt">Bowling Game Kata</a> (Uncle Bob)</li>
-						<li><a href="https://github.com/wgroeneveld/tdd-course">https://github.com/wgroeneveld/tdd-course</a></li>
+						<li><a href="https://github.com/sch3lp/tdd-course">https://github.com/sch3lp/tdd-course</a></li>
 						<li><a href="http://codemanship.co.uk/parlezuml/blog/?postid=987">Classic TDD or 'London School'?</a></li>
 						<li><a href="http://www.inf.fu-berlin.de/inst/ag-se/teaching/K-CCD-2014/Clean-Code-summary.pdf">The Essence of clean code</a></li>
-						<li><a href="https://www.codeschool.com/">Code School</a>, <a href="https://www.codewars.com/">Code Wars</a> en anderen</li>
+						<li><a href="https://www.codeschool.com/">Code School</a>, <a href="https://www.codewars.com/">Code Wars</a> and others</li>
 						</ul>
 						</span>
 					</section>
 					<section>
-						<h4>Boeken</h4>
+						<h4>Books</h4>
 
 						<p>Growing Object-Oriented Software Guided by Tests</p>
 						<img src="img/growing.jpg"/>
 					</section>
 					<section>
-						<h4>Boeken</h4>
+						<h4>Books</h4>
 
 						<p>Clean Code</p>
 						<img src="img/cleancode.jpg" width="40%" />
 					</section>
 					<section>
-						<h4>Boeken</h4>
+						<h4>Books</h4>
 
 						<p>Working Effectively With Legacy Code</p>
 						<img src="img/legacycode.jpg"/>
@@ -469,31 +366,25 @@ OK (23 tests, 25 assertions)
 				</section>
 
 				<section data-background="img/watgeleerd.jpg">
-						<h2>Wat hebben we geleerd?</h2>
+						<h2>What did we learn?</h2>
 						<section>
 						<blockquote class="darker">
-							<h2>Tim en Wouter zijn BAZEN</h2>
-						</blockquote>
-						</section>
-						<section>
-						<blockquote class="darker">
-							Test Driven Development zorgt voor:<br/>
-							<br/>
 							<ul>
-							<li>Beter design (loose coupling, single responsibility)</li>
-							<li>Leesbare code</li>
-							<li>Een vangnet voor Legacy code</li>
+								<li>What TDD is all about</li>
+								<li>How to Unit Test in a variety of programming languages</li>
+								<li>How Unit Testing can help with a legacy codebase</li>
+								<li>The different levels of tests</li>
 							</ul>
 						</blockquote>
 						</section>
 						<section>
 						<blockquote class="darker">
-							Test Driven Development is...<br/>
+							Test Driven Development:<br/>
 							<br/>
 							<ul>
-							<li>...helemaal niet zo scary!</li>
-							<li>...toegankelijk voor studenten</li>
-							<li>...zoals we het vandaag gezien hebben overdraagbaar op studenten</li>
+							<li>Improves the design of your code (loose coupling, single responsibility)</li>
+							<li>Improves readability of your code</li>
+							<li>Is a safety net to work with Legacy code</li>
 							</ul>
 						</blockquote>
 						</section>
