@@ -20,8 +20,8 @@ public class QuoteAssemblerTest {
     @Test
     public void canTransformAQuoteToItsRepresentation() throws Exception {
         UUID id = UUID.randomUUID();
-        String author = "Jamie";
-        String quotation = "As ze mn pet aanraken ja dan flip ik altijd";
+        String author = "jamie";
+        String quotation = "as ze mn pet aanraken ja dan flip ik altijd";
         Quote quote = aQuote()
                 .withId(id)
                 .withAuthor(author)

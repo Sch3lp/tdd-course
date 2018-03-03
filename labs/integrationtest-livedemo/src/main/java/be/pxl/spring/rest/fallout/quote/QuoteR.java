@@ -33,6 +33,14 @@ public class QuoteR {
         return quote;
     }
 
+    public String getFullQuote() {
+        return String.format("%s - %s", capitalize(author), capitalize(quote));
+    }
+
+    private String capitalize(String text) {
+        return text;
+    }
+
     @Override
     public String toString() {
         return "QuoteR{" +
