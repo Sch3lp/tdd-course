@@ -1,9 +1,0 @@
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\bugfix-livedemo.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\bugfix-livedemo.pdb
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\nunit.framework.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\nunit.framework.xml
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\obj\Debug\bugfix-livedemo.csprojResolveAssemblyReference.cache
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\obj\Debug\bugfix-livedemo.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\obj\Debug\bugfix-livedemo.pdb
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\bugfix-livedemo-impl.dll
-C:\Development\github\tdd-course\labs\bugfix-livedemo\bugfix-livedemo\bugfix-livedemo\bin\Debug\bugfix-livedemo-impl.pdb
